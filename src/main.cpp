@@ -22,10 +22,14 @@ SwooshAnimator swooshAnimator(pixel, NUM_LEDS);
 std::vector<Animator*> animators { &swooshAnimator };
 
 // button input
+bool readInput(Button *button) {
+	return button->apply(digitalRead(button->getInputPin()) == LOW);
+}
+
 void onPressCallback(void) {
 	swooshAnimator.start();
 }
-Button button(DEBOUNCE_CYCLES, onPressCallback);
+Button button = Button::create(INPUT_PIN, DEBOUNCE_CYCLES).registerOnPress(onPressCallback);
 
 void setup() {
 
@@ -40,7 +44,7 @@ void loop() {
 
 	looper.initCycle();
 
-	button.apply(digitalRead(INPUT_PIN) == LOW);
+	readInput(&button);
 
 	bool changed = false;
 	for (Animator *animator : animators) {

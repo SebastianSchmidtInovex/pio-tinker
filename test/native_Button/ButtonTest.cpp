@@ -3,6 +3,7 @@
 
 #include "Button.h"
 
+#define INPUT_PIN 12
 #define PRESSED 1
 #define RELEASED -1
 
@@ -28,10 +29,21 @@ void setUp(void) {
 
 void callbacks_can_be_null(void) {
 
-	Button button(0, onPressCallback);
+	Button button = Button::create(INPUT_PIN, 0);
 	TEST_ASSERT_EQUAL_INT8(0, callCount);
 
 	// press
+	button.apply(true);
+
+	TEST_ASSERT_EQUAL_INT8(0, callCount);
+
+	// release
+	button.apply(false);
+
+	TEST_ASSERT_EQUAL_INT8(0, callCount);
+
+	// register and press
+	button.registerOnPress(onPressCallback);
 	button.apply(true);
 
 	TEST_ASSERT_EQUAL_INT8(1, callCount);
@@ -58,11 +70,29 @@ void callbacks_can_be_null(void) {
 
 	TEST_ASSERT_EQUAL_INT8(3, callCount);
 	TEST_ASSERT_EQUAL_INT8(PRESSED, lastCall);
+
+	// release
+	button.apply(false);
+
+	TEST_ASSERT_EQUAL_INT8(3, callCount);
+
+	// register and press
+	button.apply(true);
+
+	TEST_ASSERT_EQUAL_INT8(4, callCount);
+	TEST_ASSERT_EQUAL_INT8(PRESSED, lastCall);
+
+	// release
+	button.registerOnRelease(onReleaseCallback);
+	button.apply(false);
+
+	TEST_ASSERT_EQUAL_INT8(5, callCount);
+	TEST_ASSERT_EQUAL_INT8(RELEASED, lastCall);
 }
 
 void reflects_input_change_once_for_zero_dropCount(void) {
 
-	Button button(0, onPressCallback, onReleaseCallback);
+	Button button = Button::create(INPUT_PIN, 0).registerOnPress(onPressCallback).registerOnRelease(onReleaseCallback);
 	TEST_ASSERT_EQUAL_INT8(0, callCount);
 
 	// press
@@ -111,7 +141,7 @@ void reflects_input_change_once_for_zero_dropCount(void) {
 
 void filters_input_flicker_for_positive_dropCount(void) {
 
-	Button button(2, onPressCallback, onReleaseCallback);
+	Button button = Button::create(INPUT_PIN, 2).registerOnPress(onPressCallback).registerOnRelease(onReleaseCallback);
 	TEST_ASSERT_EQUAL_INT8(0, callCount);
 
 	button.apply(true);
@@ -143,7 +173,7 @@ void filters_input_flicker_for_positive_dropCount(void) {
 
 void reflects_input_change_once_for_positive_dropCount(void) {
 
-	Button button(3, onPressCallback, onReleaseCallback);
+	Button button = Button::create(INPUT_PIN, 3).registerOnPress(onPressCallback).registerOnRelease(onReleaseCallback);
 	TEST_ASSERT_EQUAL_INT8(0, callCount);
 
 	button.apply(false);
@@ -202,7 +232,7 @@ void reflects_input_change_once_for_positive_dropCount(void) {
 
 void release_only_after_press(void) {
 
-	Button button(0, onPressCallback, onReleaseCallback);
+	Button button = Button::create(INPUT_PIN, 0).registerOnPress(onPressCallback).registerOnRelease(onReleaseCallback);
 	TEST_ASSERT_EQUAL_INT8(0, callCount);
 
 	button.apply(false);
@@ -218,6 +248,12 @@ void release_only_after_press(void) {
 
 	TEST_ASSERT_EQUAL_INT8(2, callCount);
 	TEST_ASSERT_EQUAL_INT8(RELEASED, lastCall);
+}
+
+void returns_given_inputPin(void) {
+	Button button = Button::create(INPUT_PIN, 0);
+
+	TEST_ASSERT_EQUAL_UINT8(INPUT_PIN, button.getInputPin());
 }
 
 int main(int argc, char **argv) {

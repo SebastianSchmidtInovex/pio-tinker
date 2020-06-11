@@ -1,14 +1,24 @@
 #include <Button.h>
 #include <stddef.h>
 
-Button::Button(uint8_t inputCycles, void (*onPress)(void)) :
-		inputCycles(inputCycles), onPress(onPress), onRelease(NULL), discards(inputCycles) {
-}
-Button::Button(uint8_t inputCycles, void (*onPress)(void), void (*onRelease)(void)) :
-		inputCycles(inputCycles), onPress(onPress), onRelease(onRelease), discards(inputCycles) {
+Button::Button(uint8_t inputPin, uint8_t inputCycles) :
+		inputPin(inputPin), inputCycles(inputCycles), discards(inputCycles) {
 }
 
-void Button::apply(bool input) {
+Button& Button::registerOnPress(void (*onPress)(void)) {
+	this->onPress = onPress;
+	return *this;
+}
+Button& Button::registerOnRelease(void (*onRelease)(void)) {
+	this->onRelease = onRelease;
+	return *this;
+}
+
+uint8_t Button::getInputPin() {
+	return inputPin;
+}
+
+bool Button::apply(bool input) {
 
 	if (input != lastButtonPressed) {
 		discards = inputCycles;
@@ -23,15 +33,11 @@ void Button::apply(bool input) {
 			buttonPressed = input;
 
 			if (buttonPressed) {
-				if (onPress != NULL) {
-					(*onPress)();
-				}
+				(*onPress)();
 			} else {
-				if (onRelease != NULL) {
-					(*onRelease)();
-				}
+				(*onRelease)();
 			}
 		}
 	}
-
+	return false;
 }
