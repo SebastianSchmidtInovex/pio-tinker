@@ -3,7 +3,15 @@
 
 #include <FastLED.h>
 
-class SwooshAnimator {
+class Animator {
+
+public:
+	virtual ~Animator() {
+	}
+	virtual bool changed() =0;
+};
+
+class SwooshAnimator: public Animator {
 
 private:
 	CRGB *pixel;
@@ -17,7 +25,6 @@ public:
 	SwooshAnimator(CRGB *pixel, uint8_t numPixels);
 	void start();
 	bool changed();
-
 };
 
 #endif /* LIB_SGS_ANIMATION_H */

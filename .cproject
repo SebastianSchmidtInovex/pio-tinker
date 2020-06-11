@@ -22,9 +22,11 @@
 							<builder arguments="-f -c eclipse" cleanBuildTarget="run --target clean" command="platformio" id="org.eclipse.cdt.build.core.settings.default.builder.1519453406" incrementalBuildTarget="run" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1409095472" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1624502120" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.incpaths.239157887" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.239157887" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/include"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/ArduinoSTL_ID750/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/looper"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib/button"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/animation"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/FastLED_ID126"/>
@@ -37,7 +39,7 @@
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/framework-arduino-avr/libraries/Wire/src"/>
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/tool-unity"/>
 								</option>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.symbols.922107295" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.922107295" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="PLATFORMIO=40304"/>
 									<listOptionValue builtIn="false" value="ARDUINO_AVR_REDBOARD"/>
 									<listOptionValue builtIn="false" value="F_CPU=16000000L"/>
@@ -48,9 +50,11 @@
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.149990277" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.54121539" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.incpaths.1096940598" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" useByScannerDiscovery="false" valueType="includePath">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1096940598" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/include"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/ArduinoSTL_ID750/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/looper"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib/button"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/animation"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/FastLED_ID126"/>
@@ -63,7 +67,7 @@
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/framework-arduino-avr/libraries/Wire/src"/>
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/tool-unity"/>
 								</option>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.symbols.1198905600" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1198905600" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="PLATFORMIO=40304"/>
 									<listOptionValue builtIn="false" value="ARDUINO_AVR_REDBOARD"/>
 									<listOptionValue builtIn="false" value="F_CPU=16000000L"/>
@@ -74,9 +78,11 @@
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.762536863" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1310559623" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.incpaths.41298875" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" useByScannerDiscovery="false" valueType="includePath">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.41298875" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/include"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/ArduinoSTL_ID750/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/looper"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib/button"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/animation"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/FastLED_ID126"/>
@@ -89,7 +95,7 @@
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/framework-arduino-avr/libraries/Wire/src"/>
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/tool-unity"/>
 								</option>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.symbols.884639970" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.884639970" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="PLATFORMIO=40304"/>
 									<listOptionValue builtIn="false" value="ARDUINO_AVR_REDBOARD"/>
 									<listOptionValue builtIn="false" value="F_CPU=16000000L"/>
@@ -126,9 +132,11 @@
 							<builder arguments="-f -c eclipse debug" cleanBuildTarget="run --target clean" command="platformio" enableCleanBuild="false" id="org.eclipse.cdt.build.core.settings.default.builder.985867833" incrementalBuildTarget="" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.libs.1855678035" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.30528994" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.incpaths.794801023" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.794801023" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/include"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/ArduinoSTL_ID750/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/looper"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib/button"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/animation"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/FastLED_ID126"/>
@@ -141,7 +149,7 @@
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/framework-arduino-avr/libraries/Wire/src"/>
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/tool-unity"/>
 								</option>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.symbols.1743427839" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.1743427839" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="PLATFORMIO=40304"/>
 									<listOptionValue builtIn="false" value="ARDUINO_AVR_REDBOARD"/>
 									<listOptionValue builtIn="false" value="F_CPU=16000000L"/>
@@ -152,9 +160,11 @@
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.919136836" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1146422798" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.incpaths.650084869" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" useByScannerDiscovery="false" valueType="includePath">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.650084869" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/include"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/ArduinoSTL_ID750/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/looper"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib/button"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/animation"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/FastLED_ID126"/>
@@ -167,7 +177,7 @@
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/framework-arduino-avr/libraries/Wire/src"/>
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/tool-unity"/>
 								</option>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.symbols.2055633423" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.2055633423" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="PLATFORMIO=40304"/>
 									<listOptionValue builtIn="false" value="ARDUINO_AVR_REDBOARD"/>
 									<listOptionValue builtIn="false" value="F_CPU=16000000L"/>
@@ -178,9 +188,11 @@
 								<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.445650141" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
 							</tool>
 							<tool id="org.eclipse.cdt.build.core.settings.holder.1637357529" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.incpaths.1246337321" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" useByScannerDiscovery="false" valueType="includePath">
+								<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1246337321" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/include"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/ArduinoSTL_ID750/src"/>
+									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/looper"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib/button"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/lib_embedded/animation"/>
 									<listOptionValue builtIn="false" value="C:/git/arduino/pio-tinker/.pio/libdeps/redboard/FastLED_ID126"/>
@@ -193,7 +205,7 @@
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/framework-arduino-avr/libraries/Wire/src"/>
 									<listOptionValue builtIn="false" value="${USERPROFILE}/.platformio/packages/tool-unity"/>
 								</option>
-								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="org.eclipse.cdt.build.core.settings.holder.symbols.2122043341" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
+								<option id="org.eclipse.cdt.build.core.settings.holder.symbols.2122043341" name="Symbols" superClass="org.eclipse.cdt.build.core.settings.holder.symbols" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="PLATFORMIO=40304"/>
 									<listOptionValue builtIn="false" value="ARDUINO_AVR_REDBOARD"/>
 									<listOptionValue builtIn="false" value="F_CPU=16000000L"/>
@@ -228,7 +240,23 @@
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 		<buildTargets>
-			<target name="Build" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="PlatformIO: Upload using Programmer" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>platformio</buildCommand>
+				<buildArguments>-f -c eclipse</buildArguments>
+				<buildTarget>run --target program</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="PlatformIO: Upload SPIFFS image" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>platformio</buildCommand>
+				<buildArguments>-f -c eclipse</buildArguments>
+				<buildTarget>run --target uploadfs</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="PlatformIO: Build" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>platformio</buildCommand>
 				<buildArguments>-f -c eclipse</buildArguments>
 				<buildTarget>run</buildTarget>
@@ -236,7 +264,15 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>false</runAllBuilders>
 			</target>
-			<target name="Upload" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="PlatformIO: Verbose Build" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>platformio</buildCommand>
+				<buildArguments>-f -c eclipse</buildArguments>
+				<buildTarget>run --verbose</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="PlatformIO: Upload" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>platformio</buildCommand>
 				<buildArguments>-f -c eclipse</buildArguments>
 				<buildTarget>run --target upload</buildTarget>
@@ -244,7 +280,15 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>false</runAllBuilders>
 			</target>
-			<target name="Clean" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="PlatformIO: Verbose Upload" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>platformio</buildCommand>
+				<buildArguments>-f -c eclipse</buildArguments>
+				<buildTarget>run --target upload --verbose</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="PlatformIO: Clean" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>platformio</buildCommand>
 				<buildArguments>-f -c eclipse</buildArguments>
 				<buildTarget>run --target clean</buildTarget>
@@ -252,15 +296,23 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>false</runAllBuilders>
 			</target>
-			<target name="Test all" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="PlatformIO: Test" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>platformio</buildCommand>
 				<buildArguments>-f -c eclipse</buildArguments>
-				<buildTarget>test -e native -e redboard</buildTarget>
+				<buildTarget>test</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>false</runAllBuilders>
 			</target>
-			<target name="Rebuild Project Index" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="PlatformIO: Remote" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>platformio</buildCommand>
+				<buildArguments>-f -c eclipse</buildArguments>
+				<buildTarget>remote run --target upload</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="PlatformIO: Rebuild C/C++ Project Index" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>platformio</buildCommand>
 				<buildArguments>-f -c eclipse</buildArguments>
 				<buildTarget>init --ide eclipse</buildTarget>
@@ -268,7 +320,15 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>false</runAllBuilders>
 			</target>
-			<target name="Update Project Libraries" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="PlatformIO: List Devices" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>platformio</buildCommand>
+				<buildArguments>-f -c eclipse</buildArguments>
+				<buildTarget>device list</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="PlatformIO: Update Project Libraries" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>platformio</buildCommand>
 				<buildArguments>-f -c eclipse</buildArguments>
 				<buildTarget>lib update</buildTarget>
@@ -276,18 +336,18 @@
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>false</runAllBuilders>
 			</target>
-			<target name="Test native" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="PlatformIO: Update All" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>platformio</buildCommand>
 				<buildArguments>-f -c eclipse</buildArguments>
-				<buildTarget>test -e native</buildTarget>
+				<buildTarget>update</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>false</runAllBuilders>
 			</target>
-			<target name="Test redboard" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+			<target name="PlatformIO: Upgrade Core" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
 				<buildCommand>platformio</buildCommand>
 				<buildArguments>-f -c eclipse</buildArguments>
-				<buildTarget>test -e redboard</buildTarget>
+				<buildTarget>upgrade</buildTarget>
 				<stopOnError>true</stopOnError>
 				<useDefaultCommand>false</useDefaultCommand>
 				<runAllBuilders>false</runAllBuilders>

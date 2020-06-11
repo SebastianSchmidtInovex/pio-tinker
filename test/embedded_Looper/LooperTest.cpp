@@ -46,7 +46,7 @@ void looper_ajusts_cycle_duration(void) {
 
 void setup() {
 
-	delay(2500);
+	delay(2000);
 
 	UNITY_BEGIN();
 	RUN_TEST(looper_ajusts_cycle_duration);

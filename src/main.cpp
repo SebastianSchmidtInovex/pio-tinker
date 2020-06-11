@@ -1,3 +1,5 @@
+#include <vector>
+
 #include <Looper.h>
 #include <Button.h>
 #include <Animation.h>
@@ -16,11 +18,12 @@ Looper looper(CYCLE_MS);
 CRGB pixel[NUM_LEDS];
 
 // animation
-SwooshAnimator animator(pixel, NUM_LEDS);
+SwooshAnimator swooshAnimator(pixel, NUM_LEDS);
+std::vector<Animator*> animators { &swooshAnimator };
 
 // button input
 void onPressCallback(void) {
-	animator.start();
+	swooshAnimator.start();
 }
 Button button(DEBOUNCE_CYCLES, onPressCallback);
 
@@ -39,7 +42,11 @@ void loop() {
 
 	button.apply(digitalRead(INPUT_PIN) == LOW);
 
-	if (animator.changed()) {
+	bool changed = false;
+	for (Animator *animator : animators) {
+		changed |= animator->changed();
+	}
+	if (changed) {
 		FastLED.show();
 	}
 
