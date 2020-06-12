@@ -4,7 +4,7 @@
 
 const uint16_t cycleMs = 20;
 
-void looper_ajusts_cycle_duration(void) {
+void reflects_input_directly_on_zero_cycleCount(void) {
 
 	Looper looper(cycleMs);
 
@@ -49,7 +49,7 @@ void setup() {
 	delay(2000);
 
 	UNITY_BEGIN();
-	RUN_TEST(looper_ajusts_cycle_duration);
+	RUN_TEST(reflects_input_directly_on_zero_cycleCount);
 	UNITY_END();
 }
 
