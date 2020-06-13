@@ -22,7 +22,7 @@ void test_data_changed_if_started(void) {
 	fill_solid(pixel, NUM_LEDS, CRGB::Black);
 	TEST_ASSERT_EACH_EQUAL_PTR(CRGB::Black, pixel, NUM_LEDS);
 
-	swooshAnimator.start();
+	swooshAnimator.start(CRGB::Teal);
 	TEST_ASSERT_TRUE(swooshAnimator.changed());
 }
 

@@ -1,12 +1,19 @@
 #include <Animation.h>
 
-SwooshAnimator::SwooshAnimator(CRGB *pixel, uint8_t numPixels) :
+Animator::Animator(CRGB *pixel, uint8_t numPixels) :
 		pixel(pixel),
-		numPixels(numPixels),
-		horizon(2 * numPixels) {}
+				numPixels(numPixels) {
+}
 
-void SwooshAnimator::start() {
+SwooshAnimator::SwooshAnimator(CRGB *pixel, uint8_t numPixels) :
+		Animator(pixel, numPixels),
+				horizon(2 * numPixels) {
+	fill_rainbow(rainbow, 32, 0);
+}
+
+void SwooshAnimator::start(uint8_t colorIndex) {
 	active = true;
+	this->colorIndex = colorIndex;
 }
 
 bool SwooshAnimator::changed() {
@@ -14,7 +21,7 @@ bool SwooshAnimator::changed() {
 
 	if (active) {
 			if (pos < numPixels) {
-				pixel[pos] = CRGB::Teal;
+			pixel[pos] = rainbow[colorIndex];
 				changed = true;
 			} else if (pos < horizon) {
 				pixel[horizon - 1 - pos] = CRGB::Black;
@@ -30,4 +37,32 @@ bool SwooshAnimator::changed() {
 		}
 
 	return changed;
+}
+
+StateDisplay::StateDisplay(CRGB *pixel) :
+		Animator(pixel, 13) {
+}
+
+void StateDisplay::show(uint8_t state) {
+	active = true;
+	this->state = state;
+}
+
+void StateDisplay::setPixel(uint8_t index, bool value) {
+
+	pixel[index] = value ? CRGB::Turquoise : CRGB::Black;
+}
+
+bool StateDisplay::changed() {
+
+	if (active) {
+		for (uint8_t index = 0; index < 5; ++index) {
+			uint8_t mask = 1 << index;
+			setPixel(index * 3, (state & mask) != 0);
+		}
+
+		return true;
+	}
+
+	return false;
 }
